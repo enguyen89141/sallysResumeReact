@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+  <meta charset="UTF-8">
+  <title>Sally Student resume</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="mainContent"></div>
+  <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+  </script>
+  <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+  </script>
+  <script
+  src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+  <script type="text/babel">
+function App(props) {
+  return (
+    <header>
+      {props.children}
+    </header>
+  );
+}
+
+ReactDOM.render(
+  <App className='header'>
+    <h1>Sally Student</h1>
+        <p>
+            <img src='https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg' alt='A picture of Sally in a yellow Zebra sweatshirt and blue pants'/>
+        </p>
+        <h2>Contact Information</h2>
+        <ul>
+            <li>
+              <address><a href="mailto:sally@student.com?subject=Resume%20Page%20Inquiry">Sally@student.com</a></address>
+            </li>
+            <li><address>
+              <a href="tel+17021234567">(702)123-4567</a>
+              </address>
+            </li>
+        </ul>
+  </App>,
+  document.querySelector('#header')
+);
+
+ReactDOM.render(
+    <App className='mainContent'>
+        <h3>Formal Education</h3>
+      <ul>
+        <li>Bachelor's in Management Information Systems at the University of Nevada, Las Vegas</li>
+      </ul>
+      <h4>Previous Employment History</h4>
+          <ol>
+            <li>Cleaver Steakhouse
+              <br/>Server
+              <br/>July 2018-Present
+              <br/>Duties: Lorem ipsum
+            </li>
+            <br/>
+            <li>Nobu, Hard Rock
+              <br/>Server
+              <br/>September 2019-Present
+              <br/>Duties: Lorem ipsum
+            </li>
+          </ol>
+    </App>,
+    document.querySelector('#mainContent')
+)
+
+  </script>
+  </body>
+</html>
